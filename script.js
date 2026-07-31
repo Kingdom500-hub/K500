@@ -406,7 +406,7 @@ function changeLanguage(language){
 
 const languageButtons = document.querySelectorAll(".lang");
 
-const savedLanguage = localStorage.getItem("language") || "en";
+const savedLanguage = "en";
 
 changeLanguage(savedLanguage);
 
@@ -428,8 +428,6 @@ languageButtons.forEach(button=>{
         languageButtons.forEach(b=>b.classList.remove("active"));
 
         button.classList.add("active");
-
-        localStorage.setItem("language",language);
 
         changeLanguage(language);
 
